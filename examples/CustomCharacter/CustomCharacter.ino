@@ -136,17 +136,5 @@ void setup() {
 }
 
 void loop() {
-  // read the potentiometer on A0:
-  int sensorReading = analogRead(A0);
-  // map the result to 200 - 1000:
-  int delayTime = map(sensorReading, 0, 1023, 200, 1000);
-  // set the cursor to the bottom row, 5th position:
-  lcd.setCursor(4, 1);
-  // draw the little man, arms down:
-  lcd.write(3);
-  delay(delayTime);
-  lcd.setCursor(4, 1);
-  // draw him arms up:
-  lcd.write(4);
-  delay(delayTime);
+
 }
