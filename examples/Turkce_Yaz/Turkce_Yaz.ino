@@ -51,7 +51,6 @@ LiquidCrystal lcd(rs, en, bl, cr, d4, d5, d6, d7);
 
 void setup() {
  
-  Serial.begin(115200);
   lcd.begin(16, 2);
   lcd.setCursor(0, 1);
   lcd.print("Türkçe Yazın");
