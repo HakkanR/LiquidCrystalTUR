@@ -81,7 +81,7 @@ class LiquidCrystal : public Print {
     void noAutoscroll();
 
     void setRowOffsets(int row1, int row2, int row3, int row4);
-    void createChar(uint8_t, uint8_t[]);
+    void createChar(uint8_t, uint8_t[], bool userAdded=1);
     void setCursor(uint8_t, uint8_t);
     virtual size_t write(uint8_t);
     void command(uint8_t);
@@ -106,11 +106,11 @@ class LiquidCrystal : public Print {
 
     uint8_t _numlines;
     uint8_t _row_offsets[4];
-    
+
     uint8_t _backlightPin;
     uint8_t _contrastPin;
     uint8_t _backlightLevel;
-    
+
     bool f196 = 0;
     bool f197 = 0;
     uint8_t cTr[8] = {
