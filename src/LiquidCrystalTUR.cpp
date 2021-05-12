@@ -81,14 +81,14 @@ void LiquidCrystal::init(uint8_t fourbitmode, uint8_t rs, uint8_t rw, uint8_t en
 
   begin(16, 1);
 }
-void  LiquidCrystal::setBacklight(uint8_t level=20, bool userDefined=true)
+void  LiquidCrystal::setBacklight(uint8_t level, bool userDefined)
 {
  if (level > 30) level = 30;
  if(_backlightPin)
  analogWrite(_backlightPin,level);
  if(userDefined) _backlightLevel = level;
 }
-void  LiquidCrystal::contrastLevel(uint8_t level=91)
+void  LiquidCrystal::contrastLevel(uint8_t level)
 {
   if(_contrastPin)
   analogWrite(_contrastPin, level);
